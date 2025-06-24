@@ -75,6 +75,15 @@ terraform init
 terraform workspace new dev
 terraform apply -var-file=tfvars/dev.tfvars
 ```
+## Task 3 – Monitoring Script
+
+- Python script monitors a list of URLs by sending HTTP GET requests.
+- Logs successful requests and sends Slack alerts on failures or high latency.
+- Built for deployment on AWS Lambda with environment variables:
+  - `SLACK_TOKEN`, `SLACK_CHANNEL`, `URLS`
+- Configurable and lightweight with error handling.
+
+> The script is located at `scripts/url_monitor.py`
 
 ## Task 4 - Troubleshooting Production 500 Errors
 
